@@ -10,6 +10,18 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
     {
         strVhost = "plex.tv"
     }
+
+    /*const Http = new XMLHttpRequest();
+    const url = 'http://plex.123eoe.com:32400/library/parts/61002/1639618033/file.mkv'
+
+    Http.open("GET", url);
+    Http.setRequestHeader('X-Plex-Token', 'JEttnZi-5wovg_QJUwFx');
+    Http.send();
+   
+    Http.onreadystatechange = (e) => {
+      console.log(Http.responseText)
+    }*/
+
     var strReq = $request.url
     var iStart = strReq.indexOf("https://")
     var iEnd = strReq.indexOf(".plex.direct:32400")
