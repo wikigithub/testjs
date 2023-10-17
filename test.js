@@ -1,5 +1,5 @@
 $request.url.replace('https', 'http');
-if ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817')) 
+if ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') && $request.url.includes("/library/parts/") && $request.url.includes(".mkv")) 
 {
 $done({
 status: 307,
