@@ -10,6 +10,7 @@ headers: {
 }
 //console.log($request.headers['Host']);
 
+$response.status = 307;
 let respheaders = $response.headers;
 respheaders['Content-Length'] = '0';
 
