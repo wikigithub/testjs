@@ -57,7 +57,7 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
     
     
     $done({respheaders});*/
-    $done("www.baid.com")
+    $done({"www.baid.com"})
 }
 //console.log($request.headers['Host']);
 
