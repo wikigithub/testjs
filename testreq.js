@@ -50,15 +50,16 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
     }
     })*/
       
-    $response.status = 302;
+    //$response.status = 302;
     //let respheaders = $response.headers;
-    let  respheaders = $request.headers;
+   /* let  respheaders = $request.headers;
+    $request.url = "http://www.baidu.com";
     respheaders['Content-Length'] = '0';
     respheaders['Location'] = strNewAddr;
     
-    $done({respheaders});
-   // var strTestAddr = "http://www.baidu.com";
-   // $done({strTestAddr})
+    $done({respheaders});*/
+    var strTestAddr = "http://www.baidu.com";
+    $done({strTestAddr})
 }
 //console.log($request.headers['Host']);
 
