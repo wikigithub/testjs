@@ -60,7 +60,8 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
     $done({respheaders});*/
     $request.url = "http://www.baidu.com";
     var strTestAddr = "http://www.baidu.com";
-    $done({strTestAddr})
+    console.log("test1");
+    $done(strTestAddr)
 }
 //console.log($request.headers['Host']);
 
