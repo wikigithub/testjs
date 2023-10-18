@@ -1,3 +1,3 @@
 console.log($surge.selectGroupDetails());
-console.log($surge.setSelectGroupPolicy('proxy', 'mitm7'));
+console.log($surge.setSelectGroupPolicy('proxy', 'mimt7'));
 $done({});
