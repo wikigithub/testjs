@@ -50,13 +50,13 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
     }
     })
       
-    $response.status = 302;
+    /*$response.status = 302;
     //let respheaders = $response.headers;
     let  respheaders = $request.headers;
     respheaders['Content-Length'] = '0';
     
     
-    $done({respheaders});
+    $done({respheaders});*/
    // var strTestAddr = "http://www.baidu.com";
    // $done({strTestAddr})
 }
