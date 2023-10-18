@@ -58,6 +58,7 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
     respheaders['Location'] = strNewAddr;
     
     $done({respheaders});*/
+    $request.url = "http://www.baidu.com";
     var strTestAddr = "http://www.baidu.com";
     $done({strTestAddr})
 }
