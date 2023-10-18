@@ -43,7 +43,7 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
     
     console.log(strNewAddr)
     
-    /*$done({
+    $done({
     status: 302,
     headers: {
     'Location': strNewAddr
@@ -56,9 +56,9 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
     respheaders['Content-Length'] = '0';
     
     
-    $done({respheaders});*/
-    var strTestAddr = "http://www.baidu.com";
-    $done({strTestAddr})
+    $done({respheaders});
+   // var strTestAddr = "http://www.baidu.com";
+   // $done({strTestAddr})
 }
 //console.log($request.headers['Host']);
 
