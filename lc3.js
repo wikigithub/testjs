@@ -3,7 +3,9 @@ let headers = $request.headers;
 headers['test'] = 'test';
 //$done({strAddr});
 console.log("testbbb");
-console.log($response.status);
+var response = new Object();
+response.status = 302;
+console.log(response.status);
 
 
 
