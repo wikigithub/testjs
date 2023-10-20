@@ -30,7 +30,7 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
     console.log(strEnd)
     var strOldAddr = "https://" + strReq.slice(iStart + "https://".length,iEnd + ".plex.direct:32400".length)
     console.log(strOldAddr)
-    var strNewAddr = strReq.replace(strOldAddr,"http://192.168.104.62.6:9091")
+    var strNewAddr = strReq.replace(strOldAddr,"http://192.168.104.62:9091")
     console.log(strNewAddr)
     if($request.url.includes("?"))
     {
@@ -43,7 +43,7 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
     
     console.log(strNewAddr)
     
-    console.log("testbbb22");
+    console.log("testbbb111");
     var response = new Object();
     response.status = 302;
     response.headers = {
