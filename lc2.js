@@ -2,7 +2,7 @@ let strAddr = $request.url;
 let headers = $request.headers;
 headers['test'] = 'test';
 //$done({strAddr});
-console.log("test333");
+console.log("test3333");
 var response
 response.status = 302;
 response.headers =  {'Location': '192.168.5.6'};
