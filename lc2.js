@@ -1,5 +1,6 @@
 let strAddr = $request.url;
- strAddr = "192.168.5.6";
+let headers = $request.headers;
+headers['test'] = 'test';
 //$done({strAddr});
-console.log("test1");
-$done(strAddr);
+console.log("test2");
+$done(headers);
