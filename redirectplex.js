@@ -25,7 +25,7 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
     }
     console.log(response)
   });
-}
+
     /*const Http = new XMLHttpRequest();
     const url = 'http://plex.123eoe.com:32400/library/parts/61002/1639618033/file.mkv'
 
