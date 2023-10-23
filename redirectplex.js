@@ -10,7 +10,22 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
     {
         strVhost = "plex.tv"
     }
-
+    
+    const url = 'http://plex.123eoe.com:32400/library/parts/61002/1639618033/file.mkv'
+    var headers = {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36",
+      'X-Plex-Token': $token
+    };
+    
+    $httpClient.get({ url: url, headers: headers }, function(error, response, data) {
+    if (error) {
+      console.log("请求失败:", error);
+      $done();
+      return;
+    }
+    console.log(response)
+  });
+}
     /*const Http = new XMLHttpRequest();
     const url = 'http://plex.123eoe.com:32400/library/parts/61002/1639618033/file.mkv'
 
