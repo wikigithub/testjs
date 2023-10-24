@@ -37,6 +37,8 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
         console.log("onedrive movie,do not slice");
         strSlice = "&slice=0";
     }
+        
+    //get file size
     var strRediretAddr = "http://192.168.104.62:9090";
     console.log(response.status);
     console.log(response.headers);
@@ -45,6 +47,8 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
     {
         strRediretAddr = "http://192.168.104.62:9092";
     }
+        
+    //replace old addr
     var strReq = $request.url
     var iStart = strReq.indexOf("https://")
     var iEnd = strReq.indexOf(".plex.direct:32400")
@@ -67,6 +71,7 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
     console.log(strNewAddr);
     
     console.log("testbbb111");
+    //make redirect response
     var response = new Object();
     response.status = 302;
     response.headers = {
