@@ -24,7 +24,13 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
       $done();
       return;
     }
-
+    //id 178621
+    //get contentid
+    var iSPos = $request.url.indexOf("library/parts/") + "library/parts/".length;
+    var iEPos = $request.url.indexOf("/",iSPos)
+    var strContentID = $request.url.substring(iSPos ,iEPos)
+    console.log("ContentID:" + strContentID);
+        
     var strRediretAddr = "http://192.168.104.62:9090";
     console.log(response.status);
     console.log(response.headers);
