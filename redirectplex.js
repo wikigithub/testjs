@@ -26,6 +26,7 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
     }
     
     console.log(response.status);
+    console.log(response.headers);
         
     var strReq = $request.url
     var iStart = strReq.indexOf("https://")
