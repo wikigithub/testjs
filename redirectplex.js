@@ -70,7 +70,7 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
     
     console.log(strNewAddr);
     
-    console.log("testbbb111");
+    console.log("testbbb1112222");
     //make redirect response
     var response = new Object();
     response.status = 302;
