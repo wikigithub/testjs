@@ -24,11 +24,15 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
       $done();
       return;
     }
-    
+
+    var strRediretAddr = "http://192.168.104.62:9090";
     console.log(response.status);
     console.log(response.headers);
     console.log("file size:" + response.headers['Content-Length']);
-        
+    if(parseInt(response.headers['Content-Length']) >= 28991029248)
+    {
+        strRediretAddr = "http://192.168.104.62:9092";
+    }
     var strReq = $request.url
     var iStart = strReq.indexOf("https://")
     var iEnd = strReq.indexOf(".plex.direct:32400")
@@ -37,7 +41,7 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
     console.log(strEnd)
     var strOldAddr = "https://" + strReq.slice(iStart + "https://".length,iEnd + ".plex.direct:32400".length)
     console.log(strOldAddr)
-    var strNewAddr = strReq.replace(strOldAddr,"http://192.168.104.62:9090")
+    var strNewAddr = strReq.replace(strOldAddr,strRediretAddr)
     console.log(strNewAddr)
     if($request.url.includes("?"))
     {
