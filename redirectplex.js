@@ -24,13 +24,19 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
       $done();
       return;
     }
+
+    var strSlice = "";
     //id 178621
     //get contentid
     var iSPos = $request.url.indexOf("library/parts/") + "library/parts/".length;
     var iEPos = $request.url.indexOf("/",iSPos)
     var strContentID = $request.url.substring(iSPos ,iEPos)
     console.log("ContentID:" + strContentID);
-        
+    if(parseInt(strContentID) > 180000)
+    {
+        console.log("onedrive movie,do not slice");
+        strSlice = "&slice=0";
+    }
     var strRediretAddr = "http://192.168.104.62:9090";
     console.log(response.status);
     console.log(response.headers);
@@ -51,14 +57,14 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
     console.log(strNewAddr)
     if($request.url.includes("?"))
     {
-        strNewAddr = strNewAddr + "&vhost=" + strVhost
+        strNewAddr = strNewAddr + "&vhost=" + strVhost + strSlice;
     }
     else
     {
-        strNewAddr = strNewAddr + "?vhost=" + strVhost
+        strNewAddr = strNewAddr + "?vhost=" + strVhost + strSlice;
     }
     
-    console.log(strNewAddr)
+    console.log(strNewAddr);
     
     console.log("testbbb111");
     var response = new Object();
