@@ -39,13 +39,13 @@ if ( ($request.headers['Host'].includes('39561de9e2cd43229ba638cd0b39f817') || $
     }
         
     //get file size
-    var strRediretAddr = "http://192.168.104.62:9090";
+    var strRediretAddr = "http://plexloc.123eoe.com:9090";
     console.log(response.status);
     console.log(response.headers);
     console.log("file size:" + response.headers['Content-Length']);
     if(parseInt(response.headers['Content-Length']) >= 28991029248)
     {
-        strRediretAddr = "http://192.168.104.62:9092";
+        strRediretAddr = "http://plexloc.123eoe.com:9092";
     }
         
     //replace old addr
